@@ -6,6 +6,8 @@ Your task is to create a simple page containing list of published posts from a p
  
 On the page there should be a header with simple a menu with categories and search input. Header should scroll with the page and sticked on top. It should be possible to filter posts by a category.
 
+It could look like this, but feel free to do it differently:
+
 ```
 |--------------------------------------------------------------|
 |                          _________             ____________  |
@@ -50,4 +52,9 @@ We work mostly in ReactJS but feel free to use vanilla JS or any other library y
 In general, use any tools and libraries you are familiar with. Again, React is a plus but anything is good. **Also, if you don't manage to finish some part because of lack of time, try to explain your intent in a comment.**
  
 
- 
+## How to do it
+
+1) Fork this repo
+2) Implement the feature
+3) Submit a PR
+4) Let us know :)
