@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px 10px/16px = 62.5%
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--color-primary-dark);
+  color: var(--color-secondary);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr)
+    [center-start] minmax(min-content, 80rem)
+    [center-end] minmax(3rem, 1fr)
+    [full-end];
+
+  grid-template-rows: 8rem min-content;
+}
+
+:root {
+  --color-primary: #424242;
+  --color-primary-light: #bdbdbd;
+  --color-primary-dark: #212121;
+  --color-secondary: #fff;
+  --deep-purple-500: #673ab7;
+}
+
+select,
+input {
+  font-family: "Raleway", sans-serif;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Hide webkit browsers input decoration
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 5rem;
+
+  grid-column: center-start / center-end;
+  grid-row: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+}

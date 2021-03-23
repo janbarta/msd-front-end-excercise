@@ -7,5 +7,53 @@
 
     <title>MSD Front-End exercise</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="nav">
+      <a class="nav__brand">POSTS</a>
+      <div class="nav__input-box">
+        <label for="filterCategory" class="nav__input-label">Filter:</label>
+        <select id="filterCategory" class="nav__input-select">
+          <option selected>Choose category</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="nav__input-box">
+        <label for="search" class="nav__input-label">Search: </label>
+        <input id="search" type="search" class="nav__input-search"></input>
+      </div>
+    </nav>
+
+    <main class="container">
+      <article class="post">
+        <div class="post__img-box">
+          <img src="https://i.picsum.photos/id/402/500/500.jpg?hmac=_x8LTdT3JIoZepA560TkobNXMZ5o9ZZ_M2Z_YjRInp8" alt="#" class="post__img">
+        </div>
+        <div class="post__info-box">
+          <div class="post__info-wrapper">
+            <h4 class="post__info-heading" id="id">Title:</h4>
+            <span class="post__info-text">Example ARTICLE About Herbs</span>
+          </div>
+          <div class="post__info-wrapper">
+            <h4 class="post__info-heading" id="id">Author:</h4>
+            <span class="post__info-text">John One</span>
+          </div>
+          <div class="post__info-wrapper">
+            <h4 class="post__info-heading" id="id">Category:</h4>
+            <span class="post__info-text">Science</span>
+          </div>
+          <div class="post__tag-box">
+            <span class="post__tag">Sea Buckthorn</span>
+            <span class="post__tag">Canomile</span>
+            <span class="post__tag">Mint</span>
+          </div>
+        </div>
+
+        <div class="post__excerpt-box">
+          <p class="post__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum unde, deleniti illum ducimus architecto iure necessitatibus pariatur dolor nam aliquam, doloremque, incidunt odit neque commodi reprehenderit amet beatae! Adipisci!</p>
+        </div>
+      </article>
+    </main>
+  </body>
 </html>
