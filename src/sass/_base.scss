@@ -70,6 +70,9 @@ input[type="search"] {
   gap: 5rem;
 
   position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
 }
 
 .fadeIn {
