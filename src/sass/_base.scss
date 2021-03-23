@@ -6,6 +6,14 @@
   box-sizing: inherit;
 }
 
+:root {
+  --color-primary: #424242;
+  --color-primary-light: #bdbdbd;
+  --color-primary-dark: #212121;
+  --color-secondary: #fff;
+  --deep-purple-500: #673ab7;
+}
+
 html {
   font-size: 62.5%; // 1rem = 10px 10px/16px = 62.5%
   font-family: "Raleway", sans-serif;
@@ -25,14 +33,6 @@ body {
     [full-end];
 
   grid-template-rows: 8rem min-content;
-}
-
-:root {
-  --color-primary: #424242;
-  --color-primary-light: #bdbdbd;
-  --color-primary-dark: #212121;
-  --color-secondary: #fff;
-  --deep-purple-500: #673ab7;
 }
 
 select,
@@ -56,6 +56,7 @@ input[type="search"] {
   outline: none;
 }
 
+// Main app container
 .container {
   width: 100%;
   max-width: 1200px;
@@ -75,6 +76,7 @@ input[type="search"] {
   transition: opacity 1s ease-in-out;
 }
 
+// Fade animation utility
 .fadeIn {
   opacity: 1 !important;
   visibility: visible !important;
