@@ -68,4 +68,11 @@ input[type="search"] {
   flex-direction: column;
   justify-content: center;
   gap: 5rem;
+
+  position: relative;
+}
+
+.fadeIn {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
