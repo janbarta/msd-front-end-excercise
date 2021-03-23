@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["./src/js/index.js"],
@@ -43,19 +44,11 @@ module.exports = {
           outputPath: "../fonts",
         },
       },
-      {
-        test: /\.(jpg|jpeg|png|gif|svg)$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          publicPath: "../img",
-          outputPath: "../img",
-        },
-      },
     ],
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",

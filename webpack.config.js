@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: ["./src/js/index.js"],
@@ -57,23 +58,15 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          publicPath: "../fonts",
-          outputPath: "../fonts",
-        },
-      },
-      {
-        test: /\.(jpg|jpeg|png|gif|svg)$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          publicPath: "../img",
-          outputPath: "../img",
+          publicPath: "/fonts",
+          outputPath: "/fonts",
         },
       },
     ],
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new BrowserSyncPlugin({
       host: "localhost",
       port: 3000,
