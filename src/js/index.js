@@ -98,7 +98,11 @@ const displayPosts = async function (filterCategory = "all") {
 
     // hide loader
   } catch (err) {
-    throw err;
+    clearLoader();
+    elements.postContainer.insertAdjacentHTML(
+      "afterend",
+      `<h2 class="error">Cannot load data<br>${err.message} :-(</h2>`
+    );
   }
 };
 

@@ -81,3 +81,13 @@ input[type="search"] {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+.error {
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+}
