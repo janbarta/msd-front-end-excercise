@@ -19,11 +19,14 @@ import { elements, renderLoader, clearLoader } from "./view/base";
  *
  *********************/
 // Return new array of posts with authors name and avatar
-const getFilterPosts = function (posts, authors, filter) {
-  // Filter posts by category
-  if (filter !== "all")
-    posts = posts.filter((post) => post.category === filter);
+const addFilterPosts = function (posts, filter) {
+  if (filter === "all") return posts;
 
+  return posts.filter((post) => post.category === filter);
+};
+
+// Return posts with author info
+const addAutorInfo = function (posts, authors) {
   // Add author name to objects
   const postsWithAuthors = posts.map((post) => {
     // Find author by ID
@@ -47,7 +50,7 @@ const getFilterPosts = function (posts, authors, filter) {
 };
 
 // Return posts with excerpts
-const getPostsWithExcerpts = function (posts) {
+const addExcerpts = function (posts) {
   const postsExcerpts = posts.map((post) => {
     // Remove HTML elements
     const content = post.content.replace(/(<([^>]+)>)/gi, "");
@@ -76,10 +79,13 @@ const displayPosts = async function (filterCategory = "all") {
     const authors = await AJAX(`${API_URL}users`);
 
     // Filter category
-    const postsFiltered = getFilterPosts(posts, authors, filterCategory);
+    const postsFiltered = addFilterPosts(posts, filterCategory);
+
+    // Add autor avatar and name
+    const postsAutor = addAutorInfo(postsFiltered, authors);
 
     // Add excerpts
-    const postsFinal = getPostsWithExcerpts(postsFiltered);
+    const postsFinal = addExcerpts(postsAutor);
 
     // Render posts
     postsFinal.forEach((post) => postView.renderPosts(post));
