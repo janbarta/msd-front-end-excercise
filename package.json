@@ -1,0 +1,34 @@
+{
+  "name": "msd-front-end-exercise",
+  "version": "1.0.0",
+  "description": "Generetes posts from API",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js --mode production",
+    "watch": "webpack --config webpack.config.js --watch --mode development"
+  },
+  "author": "David Ulrich",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "css-loader": "^5.1.3",
+    "css-minimizer-webpack-plugin": "^1.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.3.9",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^5.2.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
