@@ -1,4 +1,5 @@
 export const elements = {
+  bodyElement: document.querySelector("body"),
   postContainer: document.querySelector(".container"),
   inputBox: document.querySelectorAll(".nav__input-box"),
   filterInput: document.querySelector(".nav__input-select"),
